@@ -17,10 +17,9 @@ if (length(args) == 0) {
 TARGET_INDEX <- as.numeric(args[1])
 cat(">>> Starting Monte Carlo Simulation for Global Task Index =", TARGET_INDEX, "<<<\n")
 
-BASE_DIR <- "/N/slate/renzime/R/final/all_in_one"
-setwd(BASE_DIR)
-FUNCTION_FILE <- "/N/slate/renzime/R/final/functions.R"
-TRUTH_TABLE_PATH <- "/N/slate/renzime/R/final/Truth_Table.xlsx"
+BASE_DIR <- getwd()
+FUNCTION_FILE <- file.path(BASE_DIR, "functions.R")
+TRUTH_TABLE_PATH <- file.path(BASE_DIR, "Truth_Table.xlsx")
 TRUTH_TABLE_SHEET <- "tb"
 
 SIMULATION_TIMES <- 10000L
